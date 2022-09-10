@@ -264,18 +264,20 @@ def regg():
     closeButton = Button(tkk, text="Close", command=close_win, font=my_font1).place(x=330, y=160 + 80)
     logButton = Button(tkk, text="Already a User?", command=switch1, font=my_font1).place(x=440, y=300)
 
+    tkk.after(9000,lambda:tkk.destroy())
+
     tkk.mainloop()
 
 
 
 if __name__ == '__main__':
-    try:
-        mydb = mysql.connector.connect(
-            host="sql6.freesqldatabase.com",
-            user="sql6518322",
-            password="HNtCrWCpIm",
-            database="sql6518322"
-        )
-    except:
-        messagebox.showinfo("Error", "Please connect internet")
+    # try:
+    #     mydb = mysql.connector.connect(
+    #         host="sql6.freesqldatabase.com",
+    #         user="sql6518322",
+    #         password="HNtCrWCpIm",
+    #         database="sql6518322"
+    #     )
+    # except:
+    #     messagebox.showinfo("Error", "Please connect internet")
     regg()
