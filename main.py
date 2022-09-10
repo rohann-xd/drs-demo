@@ -271,13 +271,13 @@ def regg():
 
 
 if __name__ == '__main__':
-    # try:
-    #     mydb = mysql.connector.connect(
-    #         host="sql6.freesqldatabase.com",
-    #         user="sql6518322",
-    #         password="HNtCrWCpIm",
-    #         database="sql6518322"
-    #     )
-    # except:
-    #     messagebox.showinfo("Error", "Please connect internet")
+    try:
+        mydb = mysql.connector.connect(
+            host="sql6.freesqldatabase.com",
+            user="sql6518322",
+            password="HNtCrWCpIm",
+            database="sql6518322"
+        )
+    except:
+        messagebox.showinfo("Error", "Please connect internet")
     regg()
