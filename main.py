@@ -170,7 +170,7 @@ def regg():
             messagebox.showinfo("Error", "Please connect internet")
 
         # window
-        tkwindow = Tk()
+        tkwindow = tkinter.Tk()
         tkwindow.geometry('600x350')
         tkwindow.title('DRS Login')
 
@@ -235,7 +235,7 @@ def regg():
         tkwindow.mainloop()
 
 
-    tkk = Tk()
+    tkk = tkinter.Tk()
     tkk.geometry('600x350')
     tkk.title('DRS Registration')
     # username label and text entry box
