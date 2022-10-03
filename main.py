@@ -2,6 +2,7 @@ import tkinter
 from tkinter import *
 from functools import partial
 from tkinter import messagebox
+from tkinter import filedialog
 import mysql.connector
 import cv2 # pip install opencv-python
 import PIL.Image, PIL.ImageTk # pip install pillow
@@ -42,13 +43,6 @@ def mainprog():
         canvas.create_image(0, 0, image=frame, anchor=tkinter.NW)
         # 2. Wait for 1 second
         time.sleep(1.5)
-
-        # 3. Display sponsor image
-        # frame = cv2.cvtColor(cv2.imread("sponsor.png"), cv2.COLOR_BGR2RGB)
-        # frame = imutils.resize(frame, width=SET_WIDTH, height=SET_HEIGHT)
-        # frame = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(frame))
-        # canvas.image = frame
-        # canvas.create_image(0,0, image=frame, anchor=tkinter.NW)
 
         # 4. Wait for 1.5 second
         time.sleep(2.5)
@@ -148,7 +142,6 @@ def validateReg(username, password, name):
 def regg():
     global validateReg
 
-
     def close_win():
         tkk.destroy()
 
@@ -162,9 +155,9 @@ def regg():
         try:
             mydb = mysql.connector.connect(
                 host="sql6.freesqldatabase.com",
-                user="sql6518322",
-                password="HNtCrWCpIm",
-                database="sql6518322"
+                user="sql6523767",
+                password="QNTAXlsCef",
+                database="sql6523767"
             )
         except:
             messagebox.showinfo("Error", "Please connect internet")
@@ -264,7 +257,8 @@ def regg():
     closeButton = Button(tkk, text="Close", command=close_win, font=my_font1).place(x=330, y=160 + 80)
     logButton = Button(tkk, text="Already a User?", command=switch1, font=my_font1).place(x=440, y=300)
 
-    tkk.after(9000,lambda:tkk.destroy())
+    
+    # tkk.after(15000,lambda:tkk.destroy())
 
     tkk.mainloop()
 
@@ -274,9 +268,9 @@ if __name__ == '__main__':
     try:
         mydb = mysql.connector.connect(
             host="sql6.freesqldatabase.com",
-            user="sql6518322",
-            password="HNtCrWCpIm",
-            database="sql6518322"
+            user="sql6523767",
+            password="QNTAXlsCef",
+            database="sql6523767"
         )
     except:
         messagebox.showinfo("Error", "Please connect internet")
